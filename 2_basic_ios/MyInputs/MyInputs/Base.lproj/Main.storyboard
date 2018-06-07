@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MyInputs" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="nQj-QV-Igh">
+                                <rect key="frame" x="14" y="125" width="347" height="31"/>
+                                <connections>
+                                    <action selector="slide:" destination="BYZ-38-t0r" eventType="valueChanged" id="8dR-Qy-gAy"/>
+                                </connections>
+                            </slider>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="Nit-0o-kg0">
+                                <rect key="frame" x="265" y="163" width="94" height="29"/>
+                                <connections>
+                                    <action selector="step:" destination="BYZ-38-t0r" eventType="valueChanged" id="lYf-nn-LWR"/>
+                                </connections>
+                            </stepper>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Value" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rbl-pX-Fb7">
+                                <rect key="frame" x="157.5" y="72" width="59.5" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0mb-xM-ILx">
+                                <rect key="frame" x="16" y="162" width="51" height="31"/>
+                                <connections>
+                                    <action selector="onOff:" destination="BYZ-38-t0r" eventType="valueChanged" id="9wW-Mw-Q8R"/>
+                                </connections>
+                            </switch>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="4Fb-nq-xeR">
+                                <rect key="frame" x="16" y="329.5" width="343" height="29"/>
+                                <segments>
+                                    <segment title="Bubu"/>
+                                    <segment title="Groot"/>
+                                    <segment title="Shiri"/>
+                                </segments>
+                                <connections>
+                                    <action selector="changeSeg:" destination="BYZ-38-t0r" eventType="valueChanged" id="Sjb-pu-LwU"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="nQj-QV-Igh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="06e-Lc-xHg"/>
+                            <constraint firstItem="rbl-pX-Fb7" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="0bV-ZZ-afz"/>
+                            <constraint firstItem="nQj-QV-Igh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="105" id="AnM-Wc-8iE"/>
+                            <constraint firstItem="Nit-0o-kg0" firstAttribute="top" secondItem="nQj-QV-Igh" secondAttribute="bottom" constant="8" id="Fxe-Xi-GWF"/>
+                            <constraint firstItem="4Fb-nq-xeR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="FzQ-vC-JII"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Nit-0o-kg0" secondAttribute="trailing" constant="16" id="O9B-ZA-kNp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nQj-QV-Igh" secondAttribute="trailing" constant="16" id="VEI-zK-HVO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4Fb-nq-xeR" secondAttribute="trailing" constant="16" id="ad4-ss-euh"/>
+                            <constraint firstItem="rbl-pX-Fb7" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="52" id="cfH-hO-Y7l"/>
+                            <constraint firstItem="0mb-xM-ILx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="hXc-Gz-K85"/>
+                            <constraint firstItem="4Fb-nq-xeR" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="lpG-NN-gh5"/>
+                            <constraint firstItem="0mb-xM-ILx" firstAttribute="top" secondItem="nQj-QV-Igh" secondAttribute="bottom" constant="7" id="wSz-S6-IcK"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="feed" destination="rbl-pX-Fb7" id="6Oa-PP-Zgp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="118.29085457271366"/>
+        </scene>
+    </scenes>
+</document>
